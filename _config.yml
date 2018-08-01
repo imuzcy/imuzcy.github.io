@@ -1,11 +1,11 @@
 # Basic
 title: IMU_Zhouchenyang
-subtitle: Crius Zhou
+subtitle: Chenyang Zhou
 description: These violent delights have violent ends.
 # 头像里面的标题
 avatarTitle: imuzcy
 # 头像里面的描述
-avatarDesc: 编程·管理·运动·读书
+avatarDesc: Coding·Reading
 url: "http://imuzcy.github.io"
 
 # Comment
@@ -23,12 +23,12 @@ social:
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    id: 15c4fed56d4cae267af95752c20fa16e  
+    id: cf9d171c60e6edab2cff1a2c587aca0f
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 ga:
-    id: UA-87578654-1
+    id: UA-123196754-1
     host: auto  
 
 
