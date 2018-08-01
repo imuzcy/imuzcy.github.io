@@ -1,24 +1,24 @@
 # Basic
-title: 周刚
-subtitle: Nicolas Chow
-description: 凡是过去 皆为序章
+title: IMU_Zhouchenyang
+subtitle: Crius Zhou
+description: These violent delights have violent ends.
 # 头像里面的标题
-avatarTitle: stidio
+avatarTitle: imuzcy
 # 头像里面的描述
 avatarDesc: 编程·管理·运动·读书
-url: "http://stidio.github.io"
+url: "http://imuzcy.github.io"
 
 # Comment
 comment:
     # disqus: leopard
-    duoshuo: stidio 
+    duoshuo: imuzcy
 
 # Social
 social:
-    weibo: 1073227497 
-    github: stidio
+    # weibo: 1073227497 
+    github: imuzcy
     # twitter: 
-    mail: stidio@163.com
+    mail: chenyangzhou19940217@gmail.com
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
