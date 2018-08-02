@@ -5,15 +5,15 @@
     <description>These violent delights have violent ends.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 02 Aug 2018 10:27:02 +0800</pubDate>
-    <lastBuildDate>Thu, 02 Aug 2018 10:27:02 +0800</lastBuildDate>
+    <pubDate>Thu, 02 Aug 2018 10:32:44 +0800</pubDate>
+    <lastBuildDate>Thu, 02 Aug 2018 10:32:44 +0800</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
         <title>NLP相关工具安装</title>
-        <description>&lt;p&gt;#NLP相关工具安装&lt;/p&gt;
+        <description>&lt;h2&gt;NLP相关工具安装&lt;/h2&gt;
 
-&lt;p&gt;##1.使用Stanford CoreNLP的Python封装包处理中文（分词、词性标注、命名实体识别、句法树、依存句法分析）&lt;/p&gt;
+&lt;h3&gt;1.使用Stanford CoreNLP的Python封装包处理中文（分词、词性标注、命名实体识别、句法树、依存句法分析）&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;1.安装stanfordcorenlp&lt;/p&gt;
   &lt;ul&gt;
@@ -27,7 +27,7 @@
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stanfordcorenlp&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;###Python-demo:&lt;/p&gt;
+&lt;h4&gt;Python-demo:&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# coding=utf-8&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;stanfordcorenlp&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StanfordCoreNLP&lt;/span&gt;
 
@@ -41,8 +41,8 @@
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nlp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dependency_parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;###故障排除
-模型初始化通常需要几十秒，如果很久不出结果，加入quiet=False, logging_level=logging.DEBUG参数输出Debug信息：&lt;/p&gt;
+&lt;h4&gt;故障排除&lt;/h4&gt;
+&lt;p&gt;模型初始化通常需要几十秒，如果很久不出结果，加入quiet=False, logging_level=logging.DEBUG参数输出Debug信息：&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;logging&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;stanfordcorenlp&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StanfordCoreNLP&lt;/span&gt;
 
@@ -53,14 +53,14 @@
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;nlp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StanfordCoreNLP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'/home/crius/stanford-corenlp-full-2016-10-31/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9001&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'zh'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;##2.安装哈工大LTP&lt;/p&gt;
+&lt;h3&gt;2.安装哈工大LTP&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;1.pip安装&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pyltp&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;2.下载模型文件,&lt;a href=&quot;https://github.com/HIT-SCIR/pyltp&quot;&gt;七牛云&lt;/a&gt;,当前模型版本 3.4.0&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;###Python-demo:&lt;/p&gt;
+&lt;h4&gt;Python-demo:&lt;/h4&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
 &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyltp&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Segmentor&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;segmentor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Segmentor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -72,7 +72,7 @@
 &lt;p&gt;除了分词之外，pyltp 还提供词性标注、命名实体识别、依存句法分析、语义角色标注等功能。
 详细使用方法请参考 &lt;a href=&quot;http://pyltp.readthedocs.io/zh_CN/latest/&quot;&gt;在线文档&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;##3.结巴分词&lt;/p&gt;
+&lt;h3&gt;3.结巴分词&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;1.pip安装&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;jieba&lt;/span&gt;
