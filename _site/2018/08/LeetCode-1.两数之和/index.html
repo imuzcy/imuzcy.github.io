@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>NLP相关工具安装</title>
-  <meta name="description" content="NLP相关工具安装">
+  <title>LeetCode-1.两数之和</title>
+  <meta name="description" content="LeetCode-1.两数之和">
   <meta name="author" content="imuzcy">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="NLP相关工具安装">
-  <meta name="twitter:description" content="NLP相关工具安装">
+  <meta name="twitter:title" content="LeetCode-1.两数之和">
+  <meta name="twitter:description" content="LeetCode-1.两数之和">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="NLP相关工具安装">
-  <meta property="og:description" content="NLP相关工具安装">
+  <meta property="og:title" content="LeetCode-1.两数之和">
+  <meta property="og:description" content="LeetCode-1.两数之和">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/2018/08/NLP%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/">
+  <link rel="canonical" href="http://localhost:4000/2018/08/LeetCode-1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
   <link rel="alternate" type="application/rss+xml" title="IMU_Zhouchenyang" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -162,9 +162,9 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title">NLP相关工具安装</h1>
+    <h1 class="post-title">LeetCode-1.两数之和</h1>
     <div class="post-meta">
-      <time datetime="2018-08-01 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-08-01</time>
+      <time datetime="2018-08-02 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2018-08-02</time>
      
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       <span id="busuanzi_container_page_pv">　　阅读：<span id="busuanzi_value_page_pv"></span>次</span>
@@ -173,71 +173,56 @@
   </header>
 
   <section class="post">
-    <h1 id="nlp相关工具安装">NLP相关工具安装</h1>
+    <h1 id="leetcode-1两数之和">LeetCode-1.两数之和</h1>
 
-<h2 id="1使用stanford-corenlp的python封装包处理中文分词词性标注命名实体识别句法树依存句法分析">1.使用Stanford CoreNLP的Python封装包处理中文（分词、词性标注、命名实体识别、句法树、依存句法分析）</h2>
-<blockquote>
-  <p>1.安装stanfordcorenlp</p>
-  <ul>
-    <li>1) 下载安装JDK1.8及以上版本.</li>
-    <li>2) 下载StanfordCoreNLP文件,解压.</li>
-    <li>3) 处理模型下载jar文件,然后放到stanford-corenlp-full-xxxx-xx-xx根目录下即可</li>
-  </ul>
-</blockquote>
+<p><a href="https://leetcode-cn.com/problems/two-sum/description/">题目链接</a></p>
 
-<p><strong>pip命令:</strong></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">stanfordcorenlp</span>
-</code></pre></div></div>
+<p><strong>解题思路：</strong>
+用ans(vector)存储满足条件的答案，由于题目所说满足条件的答案只有一个。所以答案为ans[0],ans[1]。</p>
 
-<h3 id="python-demo">Python-demo:</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># coding=utf-8</span>
-<span class="kn">from</span> <span class="nn">stanfordcorenlp</span> <span class="kn">import</span> <span class="n">StanfordCoreNLP</span>
+<h3 id="code">Code：</h3>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">StanfordCoreNLP</span><span class="p">(</span><span class="s">r'/home/crius/stanford-corenlp-full-2018-02-27'</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">'zh'</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span> <span class="n">nums</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">ans</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">nums</span><span class="p">[</span> <span class="n">i</span> <span class="p">]</span> <span class="o">+</span> <span class="n">nums</span><span class="p">[</span> <span class="n">j</span> <span class="p">]</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">i</span> <span class="p">);</span>
+                    <span class="n">ans</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">j</span> <span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">ans</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
 
-<span class="n">sentence</span> <span class="o">=</span> <span class="s">'清华大学位于北京。'</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">pos_tag</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">ner</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">nlp</span><span class="o">.</span><span class="n">dependency_parse</span><span class="p">(</span><span class="n">sentence</span><span class="p">))</span>
-</code></pre></div></div>
-
-<h3 id="故障排除">故障排除</h3>
-<p>模型初始化通常需要几十秒，如果很久不出结果，加入quiet=False, logging_level=logging.DEBUG参数输出Debug信息：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">stanfordcorenlp</span> <span class="kn">import</span> <span class="n">StanfordCoreNLP</span>
-
-<span class="n">nlp</span> <span class="o">=</span> <span class="n">StanfordCoreNLP</span><span class="p">(</span><span class="s">r'path_or_host'</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">logging_level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>如果出现port is in use的出错信息，换一个端口就好了：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">nlp</span> <span class="o">=</span> <span class="n">StanfordCoreNLP</span><span class="p">(</span><span class="s">r'/home/crius/stanford-corenlp-full-2016-10-31/'</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">9001</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s">'zh'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="2安装哈工大ltp">2.安装哈工大LTP</h2>
-
-<p><strong>1.pip安装</strong></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">pyltp</span>
-</code></pre></div></div>
-<p><strong>2.下载模型文件,<a href="https://github.com/HIT-SCIR/pyltp">七牛云</a>,当前模型版本 3.4.0</strong>.</p>
-
-<h2 id="python-demo-1">Python-demo:</h2>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># -*- coding: utf-8 -*-</span>
-<span class="kn">from</span> <span class="nn">pyltp</span> <span class="kn">import</span> <span class="n">Segmentor</span>
-<span class="n">segmentor</span> <span class="o">=</span> <span class="n">Segmentor</span><span class="p">()</span>
-<span class="n">segmentor</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s">"/home/crius/ltp_data_v3.4.0/cws.model"</span><span class="p">)</span>
-<span class="n">words</span> <span class="o">=</span> <span class="n">segmentor</span><span class="o">.</span><span class="n">segment</span><span class="p">(</span><span class="s">"元芳你怎么看"</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"|"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
-<span class="n">segmentor</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
-</code></pre></div></div>
-<p>除了分词之外，pyltp 还提供词性标注、命名实体识别、依存句法分析、语义角色标注等功能。
-详细使用方法请参考 <a href="http://pyltp.readthedocs.io/zh_CN/latest/">在线文档</a></p>
-
-<h2 id="3结巴分词">3.结巴分词</h2>
-
-<p><strong>1.pip安装</strong></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">jieba</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Solution</span> <span class="n">solution</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">num</span><span class="p">;</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">target</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">tmp</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">N</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">tmp</span><span class="p">;</span>
+        <span class="n">num</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span> <span class="n">tmp</span> <span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">target</span><span class="p">;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">solution</span><span class="p">.</span><span class="n">twoSum</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">result</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span> <span class="o">&lt;&lt;</span> <span class="n">result</span> <span class="p">[</span> <span class="mi">1</span> <span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 
@@ -247,9 +232,14 @@
 <section>
        <ul class="pager">
         
+        <li class="previous">
+            <a href="/2018/08/NLP%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" data-toggle="tooltip" data-placement="top" title="NLP相关工具安装">上一篇：  <span>NLP相关工具安装</span>
+            </a>
+        </li>
+        
         
         <li class="next">
-            <a href="/2018/08/LeetCode-1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" data-toggle="tooltip" data-placement="top" title="LeetCode-1.两数之和">下一篇：  <span>LeetCode-1.两数之和</span>
+            <a href="/2018/08/LeetCode-7.%E5%8F%8D%E8%BD%AC%E6%95%B4%E6%95%B0/" data-toggle="tooltip" data-placement="top" title="Leetcode 7.反转整数">下一篇：  <span>Leetcode 7.反转整数</span>
             </a>
         </li>
         
@@ -259,7 +249,7 @@
 <section class="post-comments">
 
   
-    <div class="ds-thread" data-thread-key="/2018/08/NLP%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/" data-title="NLP相关工具安装" data-url="http://localhost:4000/2018/08/NLP%E7%9B%B8%E5%85%B3%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85/"></div>
+    <div class="ds-thread" data-thread-key="/2018/08/LeetCode-1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" data-title="LeetCode-1.两数之和" data-url="http://localhost:4000/2018/08/LeetCode-1.%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"></div>
 
     <script type="text/javascript">
         var duoshuoQuery = {short_name:"imuzcy"};
