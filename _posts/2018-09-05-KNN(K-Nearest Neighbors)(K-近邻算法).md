@@ -4,9 +4,7 @@ title: KNN(K-Nearest Neighbors)(K-近邻算法)
 date: 2018-09-05
 tags: [DeepLearning,MachineLearning,DataMining]
 ---
-
-
-# KNN(K-Nearest Neighbors)(K-近邻算法) #
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 
 ## 1.概念 ##
